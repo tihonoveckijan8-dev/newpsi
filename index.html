@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🦄 Единорожья Гавань | Психологические тесты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.css">
+</head>
+<body>
+    <!-- Волшебные частички -->
+    <div id="magicParticles"></div>
+    
+    <!-- Форма регистрации в стиле iOS -->
+    <div id="unicornPortal" class="ios-form-overlay">
+        <div class="ios-form-container">
+            <div class="ios-form-header">
+                <div class="ios-form-icons">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-magic"></i>
+                    <i class="fas fa-unicorn"></i>
+                </div>
+                
+                <h2 class="ios-form-title">Волшебный Вход</h2>
+                <div class="ios-form-subtitle">в Единорожья Гавань</div>
+            </div>
+            
+            <div class="ios-form-content">
+                <form id="unicornForm" class="ios-form">
+                    <!-- Волшебное Имя -->
+                    <div class="ios-form-group">
+                        <label class="ios-form-label">
+                            Волшебное Имя <span class="required">*</span>
+                        </label>
+                        <input type="text" id="unicornName" class="ios-form-input" 
+                               placeholder="Как тебя зовут, юный волшебник?" required>
+                        <div class="ios-form-hint">
+                            <i class="fas fa-info-circle"></i>
+                            Твоё настоящее или волшебное имя
+                        </div>
+                    </div>
+                    
+                    <!-- Фамилия Чародея -->
+                    <div class="ios-form-group">
+                        <label class="ios-form-label">
+                            Фамилия Чародея <span class="required">*</span>
+                        </label>
+                        <input type="text" id="unicornSurname" class="ios-form-input" 
+                               placeholder="Твоя магическая фамилия" required>
+                        <div class="ios-form-hint">
+                            <i class="fas fa-crown"></i>
+                            Наследственное волшебное имя
+                        </div>
+                    </div>
+                    
+                    <!-- Заколдованный Класс -->
+                    <div class="ios-form-group">
+                        <label class="ios-form-label">
+                            Заколдованный Класс <span class="required">*</span>
+                        </label>
+                        <select id="unicornGrade" class="ios-form-select" required>
+                            <option value="">Выбери свой магический класс</option>
+                            <option value="1">✨ 1 класс - Юные Волшебники</option>
+                            <option value="2">🌟 2 класс - Ученики Чародеев</option>
+                            <option value="3">💫 3 класс - Маги-Новички</option>
+                            <option value="4">🌸 4 класс - Хранители Тайн</option>
+                            <option value="5">🌺 5 класс - Повелители Стихий</option>
+                            <option value="6">🌼 6 класс - Мастера Иллюзий</option>
+                            <option value="7">🌷 7 класс - Верховные Маги</option>
+                            <option value="8">🌹 8 класс - Архимаги</option>
+                            <option value="9">🥀 9 класс - Магистры Тьмы и Света</option>
+                            <option value="10">💐 10 класс - Великие Чародеи</option>
+                            <option value="11">🪷 11 класс - Легендарные Волшебники</option>
+                        </select>
+                        <div class="ios-form-hint">
+                            <i class="fas fa-graduation-cap"></i>
+                            Уровень твоей магической подготовки
+                        </div>
+                    </div>
+                    
+                    <!-- Буква Класса и Дата Рождения в одной строке -->
+                    <div class="ios-form-row">
+                        <!-- Буква Класса -->
+                        <div class="ios-form-group">
+                            <label class="ios-form-label">Буква Класса</label>
+                            <input type="text" id="unicornLetter" class="ios-form-input ios-letter-input" 
+                                   placeholder="А" maxlength="1">
+                            <div class="ios-form-hint">
+                                <i class="fas fa-font"></i>
+                                А, Б, В, Г...
+                            </div>
+                        </div>
+                        
+                        <!-- Дата Волшебства (Рождения) -->
+                        <div class="ios-form-group">
+                            <label class="ios-form-label">Дата Волшебства</label>
+                            <input type="date" id="unicornBirth" class="ios-form-input ios-date-input">
+                            <div class="ios-form-hint">
+                                <i class="fas fa-birthday-cake"></i>
+                                ДД.ММ.ГГГГ
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Тип Единорога -->
+                    <div class="ios-form-group">
+                        <label class="ios-form-label">Тип Единорога</label>
+                        <select id="unicornType" class="ios-form-select">
+                            <option value="">Выбери своего внутреннего единорога</option>
+                            <option value="rainbow">🌈 Радужный Единорог</option>
+                            <option value="sparkle">✨ Сверкающий Единорог</option>
+                            <option value="moon">🌙 Лунный Единорог</option>
+                            <option value="starlight">🌟 Звездный Единорог</option>
+                            <option value="flower">🌸 Цветочный Единорог</option>
+                        </select>
+                        <div class="ios-form-hint">
+                            <i class="fas fa-horse-head"></i>
+                            Кто ты в мире волшебства?
+                        </div>
+                    </div>
+                    
+                    <!-- Примечание -->
+                    <div class="ios-form-note">
+                        <i class="fas fa-shield-alt"></i>
+                        Все данные защищены магическими заклинаниями конфиденциальности
+                    </div>
+                    
+                    <!-- Кнопка отправки -->
+                    <button type="submit" class="ios-form-button" id="unicornSubmitBtn">
+                        <i class="fas fa-portal-enter"></i>
+                        Открыть Портал к Тестам!
+                        <i class="fas fa-unicorn"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Шапка сайта -->
+    <header>
+        <div class="rainbow-border"></div>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="unicorn-emoji">🦄</span>
+                    <h1>Единорожья Гавань</h1>
+                </div>
+                
+                <div id="unicornBadge" class="user-badge">
+                    <div class="badge-content">
+                        <span class="badge-icon">🦄</span>
+                        <div class="badge-info">
+                            <div class="badge-name">Гость Волшебства</div>
+                            <div class="badge-class">Нажми "Начать"</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rainbow-border"></div>
+    </header>
+    
+    <!-- Облака -->
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    
+    <!-- Главная герой-секция -->
+    <main class="container">
+        <section class="hero" id="mainHero">
+            <div class="hero-content">
+                <h2>Добро пожаловать в Волшебный Мир Психологии! ✨</h2>
+                <p>
+                    Где каждый тест - это магическое приключение, а результаты помогают раскрыть 
+                    твои суперсилы! Наши единороги-помощники проведут тебя через удивительные 
+                    психологические открытия.
+                </p>
+                
+                <button id="startMagicBtn" class="magic-btn">
+                    <i class="fas fa-wand-sparkles"></i>
+                    Начать Волшебное Путешествие
+                    <i class="fas fa-rainbow"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="floating-unicorn">🦄✨</div>
+            </div>
+        </section>
+        
+        <!-- Секция с тестами (скрыта до регистрации) -->
+        <section id="magicTests" style="display: none;">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-hat-wizard"></i>
+                    Выбери Свое Магическое Приключение
+                    <i class="fas fa-magic"></i>
+                </h2>
+                <div class="rainbow-border mini"></div>
+            </div>
+            
+            <div class="tests-grid">
+                <!-- Тест 1 -->
+                <div class="unicorn-card">
+                    <div class="card-icon">🌈</div>
+                    <span class="card-category">Эмоциональная Магия</span>
+                    <h3>Тест "Радуга Настроений"</h3>
+                    <p>Узнай, какие эмоции живут в твоем волшебном сердце и как ими управлять!</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 10-15 мин</span>
+                        <span><i class="fas fa-question-circle"></i> 20 вопросов</span>
+                        <span><i class="fas fa-crystal-ball"></i> Для всех</span>
+                    </div>
+                    <button class="magic-btn start-magic-test" data-test="mood">
+                        <i class="fas fa-rainbow"></i>
+                        Начать Тест
+                    </button>
+                </div>
+                
+                <!-- Тест 2 -->
+                <div class="unicorn-card">
+                    <div class="card-icon">🦄</div>
+                    <span class="card-category">Открытие Талантов</span>
+                    <h3>"Поиск Внутреннего Единорога"</h3>
+                    <p>Определи свои суперспособности и узнай, какой ты волшебный единорог!</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 15-20 мин</span>
+                        <span><i class="fas fa-question-circle"></i> 25 вопросов</span>
+                        <span><i class="fas fa-crystal-ball"></i> 5-11 класс</span>
+                    </div>
+                    <button class="magic-btn start-magic-test" data-test="unicorn">
+                        <i class="fas fa-unicorn"></i>
+                        Начать Поиск
+                    </button>
+                </div>
+                
+                <!-- Тест 3 -->
+                <div class="unicorn-card">
+                    <div class="card-icon">✨</div>
+                    <span class="card-category">Дружба и Общение</span>
+                    <h3>"Магия Дружбы"</h3>
+                    <p>Проверь свои навыки общения и узнай, какой ты друг для окружающих!</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 12-18 мин</span>
+                        <span><i class="fas fa-question-circle"></i> 18 вопросов</span>
+                        <span><i class="fas fa-crystal-ball"></i> Для всех</span>
+                    </div>
+                    <button class="magic-btn start-magic-test" data-test="friendship">
+                        <i class="fas fa-users"></i>
+                        Проверить Магию
+                    </button>
+                </div>
+                
+                <!-- Тест 4 -->
+                <div class="unicorn-card">
+                    <div class="card-icon">🌟</div>
+                    <span class="card-category">Будущее и Мечты</span>
+                    <h3>"Карта Волшебного Пути"</h3>
+                    <p>Определи, куда ведет твоя дорога мечты и какие профессии тебе подходят!</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 20-25 мин</span>
+                        <span><i class="fas fa-question-circle"></i> 30 вопросов</span>
+                        <span><i class="fas fa-crystal-ball"></i> 8-11 класс</span>
+                    </div>
+                    <button class="magic-btn start-magic-test" data-test="future">
+                        <i class="fas fa-map-marked-alt"></i>
+                        Построить Карту
+                    </button>
+                </div>
+            </div>
+            
+            <div class="user-tests" id="userTests">
+                <h3><i class="fas fa-scroll"></i> Твои Пройденные Тесты</h3>
+                <div id="completedTests"></div>
+            </div>
+        </section>
+        
+        <!-- Контейнер для теста -->
+        <div id="testCastle"></div>
+        
+        <!-- Секция о проекте -->
+        <section id="magicAbout" class="about-section">
+            <div class="unicorn-card about-card">
+                <h3><i class="fas fa-scroll"></i> О Волшебном Проекте</h3>
+                <p>
+                    "Единорожья Гавань" — это магическое пространство, где психология встречается с волшебством. 
+                    Наши тесты созданы специально для школьников, чтобы в игровой и сказочной форме помочь им 
+                    лучше понять себя, свои эмоции, таланты и мечты.
+                </p>
+                <div class="about-features">
+                    <div class="feature">
+                        <h4><i class="fas fa-shield-alt"></i> Безопасность</h4>
+                        <p>Все данные защищены магическими заклинаниями конфиденциальности</p>
+                    </div>
+                    <div class="feature">
+                        <h4><i class="fas fa-heart"></i> Поддержка</h4>
+                        <p>Каждый результат сопровождается полезными рекомендациями</p>
+                    </div>
+                    <div class="feature">
+                        <h4><i class="fas fa-gem"></i> Уникальность</h4>
+                        <p>Только у нас тесты проводят волшебные единороги!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-unicorn"></i> Контакты Волшебников</h3>
+                    <div class="unicorn-contact">
+                        <p><i class="fas fa-hat-wizard"></i> Главный Волшебник-Психолог:</p>
+                        <p><i class="fas fa-phone-alt"></i> 📞 +7 (800) 555-35-35</p>
+                        <p><i class="fas fa-envelope"></i> ✉️ unicorn@magic-school.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 🏰 Кабинет 404, 4 этаж</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-clock"></i> Часы Магии</h3>
+                    <p>Понедельник: 9:00 - 16:00</p>
+                    <p>Вторник: 9:00 - 16:00</p>
+                    <p>Среда: 9:00 - 16:00</p>
+                    <p>Четверг: 9:00 - 16:00</p>
+                    <p>Пятница: 9:00 - 15:00</p>
+                    <p class="special-time">
+                        <i class="fas fa-moon"></i> По субботам - особые магические сессии!
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-scroll"></i> Магические Правила</h3>
+                    <p>Все тесты проводятся с согласия родителей</p>
+                    <p>Результаты используются только для помощи</p>
+                    <p>Конфиденциальность гарантируется заклинаниями</p>
+                    <p>Можно пройти тест с родителями или друзьями</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Единорожья Гавань | Школа Магической Психологии</p>
+                <p class="love-message">
+                    <i class="fas fa-magic"></i>
+                    Сделано с любовью, радугой и блестками!
+                    <i class="fas fa-sparkles"></i>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
